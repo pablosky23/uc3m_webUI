@@ -1,0 +1,20 @@
+{
+  "currentSubjects": [
+    {
+      "name": "Álgebra Lineal",
+      "info": "Grupos 81, 82, 83, 84 Curso 1",
+      "id": "algebra",
+      "prof": "Alejandro López",
+      "profId": "alejandro",
+      "profEmail": "alpz@uc3m.es"
+    },
+    {
+      "name": "Cálculo Diferencial",
+      "info": "Grupo 81, 82, 83, 84 Curso 2",
+      "id": "calculo",
+      "prof": "Jesús Camacho",
+      "profId": "jesus",
+      "profEmail": "jcama@uc3m.es"
+    }
+  ]
+}

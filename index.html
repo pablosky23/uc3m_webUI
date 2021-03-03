@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos -->
+    <title>PEV - Inicio de sesión</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./resources/styles/login.css" />
+    <link rel="stylesheet" href="./resources/styles/responsive.css" />
+  </head>
+
+  <!-- INICIO DEL CUERPO DE LA PÁGINA -->
+  <body>
+    <!-- CONTENEDOR GLOBAL -->
+    <div id="content_web">
+      <div id="logo">
+        <a href="index.html"
+          ><img
+            src="./resources/images/login_logo.png"
+            alt="Plataforma Educativa Virtual - uc3m"
+        /></a>
+      </div>
+
+      <!-- INICIO FORMULARIO LOGIN -->
+      <div id="login">
+        <div id="content_login">
+          <div id="form_login">
+            <div id="title">
+              <p>Inicio de Sesión</p>
+            </div>
+            <form id="f_login" onsubmit="submitLogin()">
+              <!-- CAMPO EMAIL -->
+              <div class="field">
+                <div class="inputLabel">
+                  <label for="log_email">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/account.svg"
+                      class="icons"
+                    />
+                    Correo electrónico:
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="log_email"
+                    name="log_email"
+                    placeholder="correo@web.com"
+                  />
+                  <p id="emailLogInfo" class="fieldInfo"></p>
+                  <p id="caps_email">Las mayúsculas están activadas</p>
+                </div>
+              </div>
+              <!-- CAMPO CONTRASEÑA -->
+              <div class="field">
+                <div class="inputLabel">
+                  <label for="log_password">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/lock.svg"
+                      class="icons"
+                    />
+                    Contraseña:
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="password"
+                    id="log_password"
+                    name="log_password"
+                    placeholder="contraseñaSegura"
+                  />
+                  <p id="passwordLogInfo" class="fieldInfo"></p>
+                  <p id="caps_password">Las mayúsculas están activadas</p>
+                </div>
+              </div>
+              <div id="form_bottom">
+                <div class="field">
+                  <!-- BOTON INICIO SESIÓN -->
+                  <input
+                    class="buttons buttonBlue"
+                    type="button"
+                    value="Iniciar sesión"
+                    onclick="submitLogin()"
+                    id="loginButton"
+                  />
+                </div>
+
+                <div class="form_texts" id = "userlinks">
+                  <p>
+                    ¿No tienes un usuario?
+                    <!-- BOTÓN QUE REDIRIGE AL REGISTRO -->
+                    <a onclick="showRegister()" class="link">Regístrate aquí</a>
+                  </p>
+                  <p>
+                    ¿Olvidaste la contraseña?
+                    <!-- BOTÓN RESTABLECER LOS CAMPOS -->
+                    <a onclick="" class="link">Restablecer</a>
+                  </p>
+                </div>
+                <div id="loading">
+                  <p id="p_loadingmsg">Bienvenido de nuevo</p>
+                  <p id="p_loadingemail">default@default.com</p>
+                  <img
+                    alt="imagen login"
+                    src="./resources/images/log_loading.gif"
+                  />
+                </div>
+              </div>
+            </form>
+            <!-- FIN DEL FORMULARIO DE LOGIN -->
+
+            <!-- INICIO DEL FORMULARIO DE REGISTRO -->
+            <form id="f_register" onsubmit="submitRegister()">
+              <!-- CAMPO NOMBRE DE USUARIO -->
+              <div class="field step1">
+                <div class="inputLabel">
+                  <label for="reg_username">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/account.svg"
+                      class="icons"
+                    />
+                    Nombre de usuario
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="reg_username"
+                    required
+                    placeholder="Nick personal"
+                    onchange="validate('username')"
+                  />
+                  <p id="usernameInfo" class="fieldInfo"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO CORREO ELECTRÓNICO -->
+              <div class="field step1">
+                <div class="inputLabel">
+                  <label for="reg_email"
+                    ><img
+                      alt="imagen login"
+                      src="resources/icons/email.svg"
+                      class="icons"
+                    />
+                    Correo electrónico
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="reg_email"
+                    placeholder="correo@web.com"
+                    onchange="validate('email')"
+                  />
+                  <p id="emailInfo" class="fieldInfo"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO CONTRASEÑA -->
+              <div class="field step1">
+                <div class="inputLabel">
+                  <label for="reg_password">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/lock.svg"
+                      class="icons"
+                    />
+                    Contraseña
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="password"
+                    id="reg_password"
+                    onchange="validate('password')"
+                    placeholder="Introduce una contraseña"
+                  />
+                </div>
+                <div class="inputField">
+                  <input
+                    type="password"
+                    id="reg_passwordB"
+                    required
+                    onchange="validate('password')"
+                    placeholder="Repite la contraseña"
+                  />
+                  <p id="passwordInfo" class="fieldInfo"></p>
+                  <p id="passwordBInfo" class="fieldInfo"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO NOMBRE -->
+              <div class="field step2">
+                <div class="inputLabel">
+                  <label for="reg_name">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/write.svg"
+                      class="icons"
+                    />
+                    Nombre y apellidos
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="reg_name"
+                    required
+                    placeholder="Nombre"
+                    onchange="validate('name')"
+                  />
+                </div>
+              </div>
+
+              <!-- CAMPO APELLIDOS -->
+              <div class="field step2">
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="reg_surname"
+                    required
+                    placeholder="Apellidos"
+                    onchange="validate('surname')"
+                  />
+                  <p id="nameInfo" class="fieldInfo"></p>
+                  <p id="surnameInfo" class="fieldInfo"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO FECHA DE NACIMIENTO -->
+              <div class="field step2">
+                <div class="inputLabel">
+                  <label for="reg_birthday">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/birth.svg"
+                      class="icons"
+                    />
+                    Fecha de nacimiento
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="date"
+                    id="reg_birthday"
+                    required
+                    onchange="validate('birthdate')"
+                  />
+                  <p id="birthdateInfo" class="fieldInfo"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO DNI -->
+              <div class="field step2">
+                <div class="inputLabel">
+                  <label for="reg_dni">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/id.svg"
+                      class="icons"
+                    />
+                    DNI
+                  </label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="reg_dni"
+                    required
+                    placeholder="Documento de Identificación"
+                    onchange="validate('DNI')"
+                  />
+                  <p id="dniInfo" class="fieldInfo"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO ROL -->
+              <div class="field step3">
+                <div class="inputLabel">
+                  <label for="reg_roles">
+                    <img
+                      alt="imagen login"
+                      src="./resources/icons/role2.svg"
+                      class="icons"
+                    />
+                    Rol
+                  </label>
+                </div>
+                <div class="inputField">
+                  <select
+                    name="roles"
+                    id="reg_roles"
+                    onchange="checkRoleOptions()"
+                    required
+                  >
+                    <option label="Seleccione uno" disabled></option>
+                    <option id="administrador">Administrador</option>
+                    <option id="professor">Profesor</option>
+                    <option id="student" selected>Alumno</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- CAMPO NIA -->
+              <div class="field step3">
+                <div class="inputLabel field_NIA">
+                  <label for="reg_nia"
+                    ><img
+                      alt="imagen login"
+                      src="./resources/icons/hg.svg"
+                      class="icons"
+                    />
+                    NIA
+                  </label>
+                </div>
+                <div class="inputField field_NIA">
+                  <input
+                    type="text"
+                    id="reg_nia"
+                    required
+                    placeholder="Identificador universitario"
+                    onchange="validate('NIA')"
+                  />
+                  <p id="niaInfo" class="fieldInfo field_NIA"></p>
+                </div>
+              </div>
+
+              <!-- CAMPO GRADO -->
+              <div class="field step3">
+                <div class="inputLabel field_degree">
+                  <label for="reg_degrees"
+                    ><img
+                      alt="imagen login"
+                      src="./resources/icons/degree.svg"
+                      class="icons"
+                    />
+                    Grado
+                  </label>
+                </div>
+                <div class="inputField field_degree">
+                  <select name="reg_degrees" id="reg_degrees" required>
+                    <option label="Seleccione uno" disabled></option>
+                    <option>Grado en Ingeniería Informática</option>
+                    <option>Grado en Derecho</option>
+                    <option>Grado en Derecho y ADE</option>
+                    <option>Grado en Ingeniería del Software</option>
+                    <option>Grado en Ingeniería Industrial</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- CAMPO UNIVERSIDAD -->
+              <div class="field step3">
+                <div class="inputLabel">
+                  <label for="reg_university">Universidad</label>
+                </div>
+                <div class="inputField">
+                  <input
+                    type="text"
+                    id="reg_university"
+                    value="Universidad Carlos III de Madrid"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <!-- CAMPO IDIOMA -->
+              <div class="field step4">
+                <div class="inputLabel">
+                  <label for="reg_language"
+                    ><img
+                      alt="imagen login"
+                      src="./resources/icons/lang.svg"
+                      class="icons"
+                    />
+                    Idioma
+                  </label>
+                </div>
+                <div class="inputField">
+                  <select name="reg_language" id="reg_language">
+                    <option selected>Español</option>
+                    <option>Inglés</option>
+                    <option>Francés</option>
+                    <option>Alemán</option>
+                    <option>Chino Simplificado</option>
+                    <option>Chino Tradicional</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- CAMPO IMAGEN DE PERFIL -->
+              <div class="field step4">
+                <div class="inputLabel">
+                  <img
+                    alt="imagen login"
+                    src="./resources/icons/picture.png"
+                    class="icons"
+                  />
+                  Imagen de perfil
+                </div>
+                <div class="checkboxesprofile">
+                  <!-- FOTO Nº1 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/student0.png"
+                    /></label>
+                    <input type="checkbox" value="student0" checked />
+                  </div>
+
+                  <!-- FOTO Nº2 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/student1.png"
+                    /></label>
+                    <input type="checkbox" value="student1" />
+                  </div>
+
+                  <!-- FOTO Nº3 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/student2.png"
+                    /></label>
+                    <input type="checkbox" value="student2" />
+                  </div>
+
+                  <!-- FOTO Nº4 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/studentf.png"
+                    /></label>
+                    <input type="checkbox" value="studentf" />
+                  </div>
+                </div>
+
+                <div class="checkboxesprofile">
+                  <!-- FOTO Nº5 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/phd0.png"
+                    /></label>
+                    <input type="checkbox" value="phd0" />
+                  </div>
+
+                  <!-- FOTO Nº6 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/phd1.png"
+                    /></label>
+                    <input type="checkbox" value="phd1" />
+                  </div>
+
+                  <!-- FOTO Nº7 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/phd2.png"
+                    /></label>
+                    <input type="checkbox" value="phd2" />
+                  </div>
+
+                  <!-- FOTO Nº8 -->
+                  <div class="checkbox profile_checkbox">
+                    <label
+                      ><img
+                        alt="imagen login"
+                        src="./resources/images/profiles/studentm.png"
+                    /></label>
+                    <input type="checkbox" value="studentm" />
+                  </div>
+                </div>
+
+                <!-- CAMPO TÉRMINOS Y CONDICIONES -->
+                <div class="field step4">
+                  <div class="inputLabel checkbox">
+                    <label for="reg_conditions"
+                      >Acepto los términos y condiciones de uso
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      id="reg_conditions"
+                      required
+                      onchange="validate('checkbox')"
+                    />
+                    <p id="conditionsInfo" class="fieldInfo"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BOTONES DE CONTROL DE AVANCE -->
+              <div id="stepbuttons">
+                <input
+                  type="button"
+                  value="Cancelar"
+                  onclick="goBack()"
+                  id="buttonBack"
+                  class="buttonRed"
+                />
+                <input
+                  type="button"
+                  value="Siguiente paso"
+                  onclick="goNext()"
+                  id="buttonNext"
+                  class="buttonBlack"
+                />
+              </div>
+
+              <!-- BOTÓN DE RESTABLECER CAMPOS -->
+              <div class="form_texts">
+                <p>
+                  <a onclick="resetStepField()" class="linkRed">
+                    Restablecer campos
+                  </a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div id="content_aside">
+            <div id="aside_display">
+              <div id="messagebox">
+                <div id="messagetext">
+                  Bienvenid@ a la Plataforma Educativa Online de la uc3m.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- INICIO FOOTER -->
+    <div id="footer">
+      <ul>
+        <li><a href="https://www.uc3m.es/inicio/contacta">Contacto</a></li>
+        <li>|</li>
+        <li>
+          <a
+            href="https://www.uc3m.es/inicio/informacion-legal/politica-privacidad"
+            >Política de privacidad</a
+          >
+        </li>
+        <li>|</li>
+        <li>
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+            <img src="./resources/images/img_cc.png" alt="Creative Commons" />
+          </a>
+        </li>
+      </ul>
+      <div id="footerauthors">
+        <p>Copyright 2020 © PDHG, SCT, DFP, NFP</p>
+      </div>
+    </div>
+    <!-- FIN FOOTER -->
+    </div>
+    
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./resources/js/js.cookie.js"></script>
+    <script src="./resources/js/login.js"></script>
+  </body>
+</html>

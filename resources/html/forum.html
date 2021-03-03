@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>foro</title>
+  </head>
+  <body>
+    <div class="container_header">
+      <h1>FORO DE LA ASIGNATURA</h1>
+      <img class="icono_temario" src="resources/icons/asig3black.png" alt="icono del temario"/>
+    </div>
+    <br />
+    <!-- Foro de la Asignatura -->
+    <!-- Mensaje 1 -->
+    <div class="dv_forumtopic" onclick="toggleTemaForo(1)">
+      <div class="dv_forumcontent">
+        <div class="dv_forumimage">
+          <img src="./resources/images/img_topic0.png" alt="Imagen del Post" />
+        </div>
+        <div class="dv_forummsgheader">
+          <div class="dv_forumtitle">
+            <p class="p_forumtitletopic" id="p_topictitle1">Tema 1</p>
+            <p class="p_forumlastmsg">
+              Último mensaje el <b id="b_lastmsgdate1"> unknown </b> a las
+              <b id="b_lastmsghour1"> unknown </b>
+            </p>
+
+            <p class="p_forumlastmsg">
+              escrito por <b id="b_lastmsgauthor1"> unknown </b>
+            </p>
+          </div>
+          <div class="dv_forummsgcounter">
+            <p>
+              <img src="./resources/images/img_forummsg.png" alt="Mensajes" />
+              <br /><b id="b_msgcount1">27</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dv_topicposts" id="dv_topicpostsmsgs1">
+      <div id="dv_topicposts1"></div>
+      <div class="dv_topicform">
+        <div class="dv_topicinput">
+          <input type="text" class="txt_topicinput" id="inputNewMsg1" />
+          <input
+            type="button"
+            class="txt_topicsend"
+            onclick="saveNewMsg('inputNewMsg1', 1)"
+            value="Enviar"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje 2 -->
+    <div class="dv_forumtopic" onclick="toggleTemaForo(2)">
+      <div class="dv_forumcontent">
+        <div class="dv_forumimage">
+          <img src="./resources/images/img_topic0.png" alt="Imagen del Post" />
+        </div>
+        <div class="dv_forummsgheader">
+          <div class="dv_forumtitle">
+            <p class="p_forumtitletopic" id="p_topictitle2">Tema 1</p>
+            <p class="p_forumlastmsg">
+              Último mensaje el <b id="b_lastmsgdate2"> unknown </b> a las
+              <b id="b_lastmsghour2"> unknown </b>
+            </p>
+
+            <p class="p_forumlastmsg">
+              escrito por <b id="b_lastmsgauthor2"> unknown </b>
+            </p>
+          </div>
+          <div class="dv_forummsgcounter">
+            <p>
+              <img src="./resources/images/img_forummsg.png" alt="Mensajes" />
+              <br /><b id="b_msgcount2">27</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dv_topicposts" id="dv_topicpostsmsgs2">
+      <div id="dv_topicposts2"></div>
+      <div class="dv_topicform">
+        <div class="dv_topicinput">
+          <input type="text" class="txt_topicinput" id="inputNewMsg2" />
+          <input
+            type="button"
+            class="txt_topicsend"
+            onclick="saveNewMsg('inputNewMsg2', 2)"
+            value="Enviar"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje 3 -->
+    <div class="dv_forumtopic" onclick="toggleTemaForo(3)">
+      <div class="dv_forumcontent">
+        <div class="dv_forumimage">
+          <img src="./resources/images/img_topic0.png" alt="Imagen del Post" />
+        </div>
+        <div class="dv_forummsgheader">
+          <div class="dv_forumtitle">
+            <p class="p_forumtitletopic" id="p_topictitle3">Tema 1</p>
+            <p class="p_forumlastmsg">
+              Último mensaje el <b id="b_lastmsgdate3"> unknown </b> a las
+              <b id="b_lastmsghour3"> unknown </b>
+            </p>
+
+            <p class="p_forumlastmsg">
+              escrito por <b id="b_lastmsgauthor3"> unknown </b>
+            </p>
+          </div>
+          <div class="dv_forummsgcounter">
+            <p>
+              <img src="./resources/images/img_forummsg.png" alt="Mensajes" />
+              <br /><b id="b_msgcount3">27</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dv_topicposts" id="dv_topicpostsmsgs3">
+      <div id="dv_topicposts3"></div>
+      <div class="dv_topicform">
+        <div class="dv_topicinput">
+          <input type="text" class="txt_topicinput" id="inputNewMsg3" />
+          <input
+            type="button"
+            class="txt_topicsend"
+            onclick="saveNewMsg('inputNewMsg3', 3)"
+            value="Enviar"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mensaje 4 -->
+    <div class="dv_forumtopic" onclick="toggleTemaForo(4)">
+      <div class="dv_forumcontent">
+        <div class="dv_forumimage">
+          <img src="./resources/images/img_topic0.png" alt="Imagen del Post" />
+        </div>
+        <div class="dv_forummsgheader">
+          <div class="dv_forumtitle">
+            <p class="p_forumtitletopic" id="p_topictitle4">Tema 1</p>
+            <p class="p_forumlastmsg">
+              Último mensaje el <b id="b_lastmsgdate4"> unknown </b> a las
+              <b id="b_lastmsghour4"> unknown </b>
+            </p>
+
+            <p class="p_forumlastmsg">
+              escrito por <b id="b_lastmsgauthor4"> unknown </b>
+            </p>
+          </div>
+          <div class="dv_forummsgcounter">
+            <p>
+              <img src="./resources/images/img_forummsg.png" alt="Mensajes" />
+              <br /><b id="b_msgcount4">27</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dv_topicposts" id="dv_topicpostsmsgs4">
+      <div id="dv_topicposts4"></div>
+      <div class="dv_topicform">
+        <div class="dv_topicinput">
+          <input type="text" class="txt_topicinput" id="inputNewMsg4" />
+          <input
+            type="button"
+            class="txt_topicsend"
+            onclick="saveNewMsg('inputNewMsg4', 4)"
+            value="Enviar"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje 5 -->
+    <div class="dv_forumtopic" onclick="toggleTemaForo(5)">
+      <div class="dv_forumcontent">
+        <div class="dv_forumimage">
+          <img src="./resources/images/img_topic0.png" alt="Imagen del Post" />
+        </div>
+        <div class="dv_forummsgheader">
+          <div class="dv_forumtitle">
+            <p class="p_forumtitletopic" id="p_topictitle5">Tema 1</p>
+            <p class="p_forumlastmsg">
+              Último mensaje el <b id="b_lastmsgdate5"> unknown </b> a las
+              <b id="b_lastmsghour5"> unknown </b>
+            </p>
+
+            <p class="p_forumlastmsg">
+              escrito por <b id="b_lastmsgauthor5"> unknown </b>
+            </p>
+          </div>
+          <div class="dv_forummsgcounter">
+            <p>
+              <img src="./resources/images/img_forummsg.png" alt="Mensajes" />
+              <br /><b id="b_msgcount5">27</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dv_topicposts" id="dv_topicpostsmsgs5">
+      <div id="dv_topicposts5"></div>
+      <div class="dv_topicform">
+        <div class="dv_topicinput">
+          <input type="text" class="txt_topicinput" id="inputNewMsg5" />
+          <input
+            type="button"
+            class="txt_topicsend"
+            onclick="saveNewMsg('inputNewMsg5', 5)"
+            value="Enviar"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <script src="./resources/js/js.cookie.js"></script>
+    <script src="./resources/js/forum.js"></script>
+  </body>
+</html>

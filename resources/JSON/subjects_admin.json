@@ -1,0 +1,76 @@
+{
+  "currentSubjects": [
+    {
+      "name": "Álgebra Lineal",
+      "info": "Grupo 81 Curso 1",
+      "id": "algebra",
+      "prof": "Alejandro López",
+      "profId": "alejandro",
+      "profEmail": "alpz@uc3m.es"
+    },
+    {
+      "name": "Cálculo Diferencial",
+      "info": "Grupo 81 Curso 2",
+      "id": "calculo",
+      "prof": "Jesús Camacho",
+      "profId": "jesus",
+      "profEmail": "jcama@uc3m.es"
+    },
+    {
+      "name": "Estructura de Datos y Algoritmos",
+      "info": "Grupo 81 Curso 1",
+      "id": "eda",
+      "prof": "Elisa Fernández",
+      "profId": "elisa",
+      "profEmail": "elfer@uc3m.es"
+    },
+    {
+      "name": "Interfaces de Usuario",
+      "info": "Grupo 81 Curso 3",
+      "id": "iu",
+      "prof": "Sergio Frías",
+      "profId": "sergio",
+      "profEmail": "sfrias@uc3m.es"
+    },
+    {
+      "name": "Redes de Ordenadores",
+      "info": "Grupo 81 Curso 3",
+      "id": "redes",
+      "prof": "Noelia García",
+      "profId": "noelia",
+      "profEmail": "nogar@uc3m.es"
+    },
+    {
+      "name": "Física",
+      "info": "Grupo 81 Curso 1",
+      "id": "fisica",
+      "prof": "NULL",
+      "profId": "default",
+      "profEmail": "default@uc3m.es"
+    },
+    {
+      "name": "Teoría de Autómatas y Lenguajes Formales",
+      "info": "Grupo 81 Curso 2",
+      "id": "talf",
+      "prof": "NULL",
+      "profId": "default",
+      "profEmail": "default@uc3m.es"
+    },
+    {
+      "name": "Criptografía y Seguridad Informática",
+      "info": "Grupo 81 Curso 2",
+      "id": "csi",
+      "prof": "NULL",
+      "profId": "default",
+      "profEmail": "default@uc3m.es"
+    },
+    {
+      "name": "Estadística",
+      "info": "Grupo 81 Curso 2",
+      "id": "estadistica",
+      "prof": "NULL",
+      "profId": "default",
+      "profEmail": "default@uc3m.es"
+    }
+  ]
+}

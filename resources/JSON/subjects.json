@@ -1,0 +1,71 @@
+{
+  "currentSubjects": [
+    {
+      "name": "Álgebra Lineal",
+      "info": "Grupo 81 Curso 1",
+      "id": "algebra",
+      "prof": "Alejandro López",
+      "profId": "alejandro",
+      "profEmail": "alpz@uc3m.es"
+    },
+    {
+      "name": "Cálculo Diferencial",
+      "info": "Grupo 81 Curso 2",
+      "id": "calculo",
+      "prof": "Jesús Camacho",
+      "profId": "jesus",
+      "profEmail": "jcama@uc3m.es"
+    },
+    {
+      "name": "Estructura de Datos y Algoritmos",
+      "info": "Grupo 81 Curso 1",
+      "id": "eda",
+      "prof": "Elisa Fernández",
+      "profId": "elisa",
+      "profEmail": "elfer@uc3m.es"
+    },
+    {
+      "name": "Interfaces de Usuario",
+      "info": "Grupo 81 Curso 3",
+      "id": "iu",
+      "prof": "Sergio Frías",
+      "profId": "sergio",
+      "profEmail": "sfrias@uc3m.es"
+    },
+    {
+      "name": "Redes de Ordenadores",
+      "info": "Grupo 81 Curso 3",
+      "id": "redes",
+      "prof": "Noelia García",
+      "profId": "noelia",
+      "profEmail": "nogar@uc3m.es"
+    }
+  ],
+
+  "oldSubjects": [
+    {
+        "name": "Física",
+        "info": "Grupo 81 Curso 1",
+        "id": "fisica",
+        "url": "https://aplicaciones.uc3m.es/cpa/generaFicha?est=218&plan=256&asig=13867&idioma=1"
+      },
+      {
+        "name": "Teoría de Autómatas y Lenguajes Formales",
+        "info": "Grupo 81 Curso 2",
+        "id": "talf",
+        "url": "https://aplicaciones.uc3m.es/cpa/generaFicha?est=218&plan=256&asig=13877&idioma=1"    
+      },
+      {
+        "name": "Criptografía y Seguridad Informática",
+        "info": "Grupo 81 Curso 2",
+        "id": "csi",
+        "url": "https://aplicaciones.uc3m.es/cpa/generaFicha?est=218&plan=256&asig=15973&idioma=1"
+      },
+      {
+        "name": "Estadística",
+        "info": "Grupo 81 Curso 2",
+        "id": "estadistica",
+        "url": "https://aplicaciones.uc3m.es/cpa/generaFicha?est=218&plan=256&asig=13876&idioma=1"
+      }
+  ]
+}

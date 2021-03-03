@@ -1,0 +1,12 @@
+{
+  "sliderImages": [
+    {
+      "url": "../resources/images/slider_1.jpg",
+      "title": "Bienvenid@ a la Plataforma Educativa Online de la uc3m"
+    },
+    {
+      "url": "../resources/images/slider_2.jpg",
+      "title": "Publicadas las fechas del periodo de matriculación del Segundo Cuatrimestre"
+    }
+  ]
+}

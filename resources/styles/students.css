@@ -1,0 +1,77 @@
+/*Estilos pertenecientes a los estudiantes*/
+.dv_student {
+  border: solid 1.5px;
+  border-radius: 5px;
+  margin: 1% auto 1% auto;
+  width: 90%;
+  display: flex;
+  background-color: white;
+}
+
+.dv_studentemail p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 3px 0px 0px 3px;
+  padding: 0% 1% 0% 1%;
+}
+
+.dv_studentimage {
+  padding: 0.5%;
+  margin: 0.5%;
+  display: inline-block;
+  border-radius: 4px;
+  border: solid 1px black;
+  background-color: rgb(82, 69, 69);
+}
+
+.dv_studentimage img {
+  vertical-align: middle;
+  height: 40px;
+  padding: 2%;
+}
+
+.dv_studentemail {
+  display: flex;
+  width: 100%;
+}
+
+.dv_studentemail p {
+  padding: 0.2%;
+  width: 95%;
+  padding: 1%;
+}
+
+.dv_studentsend {
+  text-align: right;
+  display: flex;
+  width: 5%;
+  float: left;
+  border-radius: 4px;
+  background-color: rgb(57, 58, 63);
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+.dv_studentsend img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.dv_studentsend:hover {
+  background-color: rgb(228, 228, 233);
+  cursor: pointer;
+}
+
+.dv_studentscontent {
+  width: 100%;
+  margin-top: 0.1%;
+}
+
+.dv_studentsname {
+  padding: 0% 1% 0% 1%;
+  margin: 0.5%;
+  background-color: rgb(233, 233, 233);
+  border-radius: 2.5px;
+  font-weight: bold;
+}

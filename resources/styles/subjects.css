@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+/*MENÚ DE CONTROL DEL PROFESOR*/
+
+#extracontrols {
+  display: none;
+}
+
+#control_menu_professor {
+  color: white;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 3%;
+  background-color: rgb(48, 48, 48);
+  justify-content: center;
+}
+
+.control_menu_element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1%;
+  width: 20%;
+  transition: transform .2s;
+}
+
+.control_menu_icon {
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 25%;
+  max-width: 25%;
+  border: solid 1px black;
+  border-radius: 4px;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+}
+
+.control_menu_icon img {
+  width: 100%;
+  margin: auto;
+}
+
+.control_menu_description {
+  cursor: pointer;
+  /*font-weight: 600;*/
+  min-width: 50px;
+  max-width: 125px;
+  text-align: center;
+}
+
+.control_menu_element:hover {
+  transform: scale(1.1); 
+
+  font-weight: 600;
+}
+/*COLUMNA CENTRAL*/
+
+#container_changed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/*TEMARIO*/
+
+#temario {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2.5px solid black;
+}
+
+.icono_temario, .icono_temarioB{
+  height: 32px;
+  vertical-align: middle;
+  margin: auto 0%;
+}
+
+
+#container_temario {
+  margin-top: 3%;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido_temario {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5%;
+  border-bottom: 1px solid grey;
+}
+
+#actividades_extra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4%;
+  border-bottom: 1px solid grey;
+}
+
+.container_description {
+  align-self: flex-end;
+  font-size: 13px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+.icono_tema {
+  max-width: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.2%;
+  cursor: pointer;
+}
+
+.icono_tema img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/*CALIFICACIONES*/
+#grades_table{
+  border-collapse: collapse;
+}
+
+.subject_table{
+  border-collapse: collapse;
+}
+
+.grades_row td{
+  border-bottom: 1px solid grey;
+}
+
+.grade{
+  text-align: center;
+  font-size: 170%;
+}
+
+.review{
+  padding: 10px;
+}
+
+.text{
+  text-align: center;
+  font-size: 75%;
+}
+
+.text_blue{
+  text-align: center;
+  font-size: 75%;
+  color: blue;
+}
+
+.big_size {
+  font-size: 170%;
+}
+
+#marks_global, #tasks_global, #container_forum, #studentsview, #globalgrades, #globaltasks {
+  display: none;
+  margin: auto;
+  width: 90%;
+}
+
+#globaltasks_center {
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+
+.container_assignmentName {
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content_assignmentName {
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+#check {
+  width: 50%;
+  text-align: center;
+}
+
+#mark {
+  width: 50%;
+  text-align: center;
+}
+
+.content_marks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5%;
+  border-bottom: 1px solid grey;
+}
+
+.content_state {
+  width: 22%;
+  display: flex;
+  justify-content: space-around;
+}
+*/
+.request {
+  text-align: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.rating {
+  color: grey;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+/* TAREAS Y ACTIVIDADES */
+
+.test_blue {
+  color: blue;
+  text-align: center;
+  font-size: 90%;
+}
+
+.normal_size {
+  text-align: center;
+  font-size: 80%;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container_tasks {
+  margin-top: 3%;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+}
+
+.state {
+  width: 50%;
+  text-align: center;
+}
+
+#mark {
+  width: 50%;
+  text-align: center;
+}
+
+.content_tasks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5%;
+  border-bottom: 1px solid grey;
+}
+
+.content_state {
+  width: 22%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit {
+  margin: 5px 0px 2px 0px;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: rgb(8, 8, 194);
+  border: solid 1px black;
+  color: white;
+  padding: 1%;
+}
+
+.submit:hover {
+  background-color: rgb(63, 63, 214);
+}
+
+#create_group {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+#group {
+  width: 50%;
+  text-align: center;
+}
+
+/* GRUPOS DE TRABAJO */
+
+#workgroup {
+  display: none;
+  width: 90%;
+}
+
+#workgroup_header {
+  margin-top: 1%;
+  align-self: flex-start;
+}
+
+#groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ocupation {
+  width: 100%;
+  margin-right: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ENTREGADOR */
+
+#drag_and_drop {
+  display: none;
+  width: 90%;
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container_box {
+  background: rgb(73, 72, 72);
+  width: 97%;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content_box {
+  width: 100%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header_box {
+  width: 100%;
+  background: gray;
+  border-bottom: 1px solid black;
+}
+
+#header {
+  margin: 1%;
+}
+
+#content_files {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#drag {
+  margin: 1%;
+}
+
+#content_drag {
+  min-width: 15%;
+  max-width: 15%;
+}
+
+#icon_drag {
+  width: 100%;
+}
+
+#submit_buttom {
+  background-color: rgb(0, 0, 148);
+  border-radius: 4px;
+  margin: 1%;
+  padding: 1% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+#submit_buttom:hover {
+  background-color: rgb(60, 69, 194);
+}
+
+#first_line {
+  font-size: 65%;
+  color: white;
+}
+
+#second_line {
+  color: white;
+}
+
+#submit_title {
+  margin-top: 1%;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}

@@ -1,0 +1,59 @@
+{
+    "titulo": "Duda en el apartado 2.3 del laboratorio",
+    "tema": [
+        {
+            "name": "Pablo",
+            "surname": "Díaz-Heredero García",
+            "mail": "100405973@alumnos.uc3m.es",
+            "message": "Una pregunta, los datos que nos dieron en dicho apartado están bien, ha dicho algo el profe???",
+            "date": "05/07/2020",
+            "hour": "12:35",
+            "profileimg": "student1"
+        },
+        {
+            "name": "Marina",
+            "surname": "Lora Novillo",
+            "mail": "100404324@alumnos.uc3m.es",
+            "message": "Por qué lo dices?",
+            "date": "05/07/2020",
+            "hour": "13:52",
+            "profileimg": "student2"
+        },
+        {
+            "name": "Pablo",
+            "surname": "Díaz-Heredero García",
+            "mail": "100405973@alumnos.uc3m.es",
+            "message": "Porque tras calcular la resistencia deberíamos comprobar con el dato que nos daban si habíamos obtenido un resultado correcto y tras hacerlo paso a paso como en el libro, el resultado que obtengo no es ni de lejos el mismo",
+            "date": "06/07/2020",
+            "hour": "18:17",
+            "profileimg": "student1"
+        },
+        {
+            "name": "Andrea",
+            "surname": "Ibarra Sales",
+            "mail": "100409005@alumnos.uc3m.es",
+            "message": "Prueba a calcularlo de nuevo, porque yo ya tengo hecho ese punto y el resultado es correcto diría :)",
+            "date": "07/07/2020",
+            "hour": "13:55",
+            "profileimg": "student2"
+        },
+        {
+            "name": "Pablo",
+            "surname": "Díaz-Heredero García",
+            "mail": "100405973@alumnos.uc3m.es",
+            "message": "Vale vale, muchas gracias, era solo que el cálculo de la resistencia en ese cuadro no era correcto",
+            "date": "09/07/2020",
+            "hour": "19:42",
+            "profileimg": "student1"
+        },
+        {
+            "name": "Andrea",
+            "surname": "Ibarra Sales",
+            "mail": "100409005@alumnos.uc3m.es",
+            "message": "Perfecto",
+            "date": "10/07/2020",
+            "hour": "15:55",
+            "profileimg": "student2"
+        }
+    ]
+}

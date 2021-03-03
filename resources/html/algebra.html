@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Álgebra Lineal</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <!-- MENÚ DE CONTROL DEL PROFESOR -->
+    <div id="extracontrols">
+      <div id="control_menu_professor">
+        <!-- Elemento de control nº 1 -->
+        <div class="control_menu_element" onclick="showStudents()">
+          <div class="control_menu_icon">
+            <img
+              src="resources/icons/option_students.png"
+              alt="elemento de control"
+            />
+          </div>
+          <div class="control_menu_description">
+            <p>Modificar Estudiantes</p>
+          </div>
+        </div>
+
+        <!-- Elemento de control nº 2 -->
+        <div class="control_menu_element" onclick="showGlobalGrades()">
+          <div class="control_menu_icon">
+            <img
+              src="resources/icons/option_grades.png"
+              alt="elemento de control"
+            />
+          </div>
+          <div class="control_menu_description">
+            <p>Administrador de Calificaciones</p>
+          </div>
+        </div>
+
+        <!-- Elemento de control nº 3 -->
+        <div class="control_menu_element" onclick="showTasks('professor')">
+          <div class="control_menu_icon">
+            <img
+              src="resources/icons/option_tasks.png"
+              alt="elemento de control"
+            />
+          </div>
+          <div class="control_menu_description">
+            <p>Gestor de Actividades</p>
+          </div>
+        </div>
+
+        <!-- Elemento de control nº 4 -->
+        <div class="control_menu_element" onclick="showContentEditor()">
+          <div class="control_menu_icon">
+            <img
+              src="resources/icons/option_content.png"
+              alt="elemento de control"
+            />
+          </div>
+          <div class="control_menu_description">
+            <p>Editor de Contenido</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENEDOR DEL FORO -->
+    <div id="container_forum"></div>
+    <!-- CONTENEDOR DE LOS ESTUDIANTES -->
+    <div id="studentsview"></div>
+    <!-- CONTENEDOR DE LAS CALIFICACIONES GLOBALES -->
+    <div id="globalgrades"></div>
+     <!-- CONTENEDOR DE LAS TAREAS GLOBALES -->
+     <div id="globaltasks"></div>
+
+    <!-- CÓDIGO DEL CONTENIDO DEL TEMARIO -->
+    <div id="temario">
+      <div class="container_header">
+        <h1>TEMARIO DE LA ASIGNATURA</h1>
+        <img
+          class="icono_temario"
+          src="resources/icons/asig3black.png"
+          alt="icono del temario"
+        />
+      </div>
+      <div id="container_temario">
+        <div class="contenido_temario">
+          <div class="container_description">
+            <h3>TEMA 1: MATRICES</h3>
+            Introducción y repaso de matrices.
+          </div>
+          <div class="icono_tema">
+            <img src="resources/icons/file_pdf.png" alt="Icono del Archivo" />
+          </div>
+        </div>
+        <div class="contenido_temario">
+          <div class="container_description">
+            <h3>TEMA 2: SISTEMAS DE ECUACIONES LINEALES</h3>
+            Métodos matriciales de resolución de sistemas de ecuaciones
+            lineales.
+          </div>
+          <div class="icono_tema">
+            <img src="resources/icons/file_pdf.png" alt="Icono del Archivo" />
+          </div>
+        </div>
+        <div class="contenido_temario">
+          <div class="container_description">
+            <h3>TEMA 3: TRANSFORMACIONES LINEALES Y MATRICES</h3>
+            Representación de transformaciones lineales mediante matrices.
+          </div>
+          <div class="icono_tema">
+            <img src="resources/icons/file_pdf.png" alt="Icono del Archivo" />
+          </div>
+        </div>
+        <div class="contenido_temario">
+          <div class="container_description">
+            <h3>TEMA 4: CAMBIO DE BASE Y VALORES Y VECTORES PROPIOS</h3>
+            Explicación de la forma normal y de la ecuación característica.
+          </div>
+          <div class="icono_tema">
+            <img src="resources/icons/file_pdf.png" alt="Icono del Archivo" />
+          </div>
+        </div>
+        <div class="contenido_temario">
+          <div class="container_description">
+            <h3>TEMA 5: GEOMETRÍA DE LAS TRANSFORMACIONES LINEALES</h3>
+            Reflexiones, contracciones y dilataciones, rotaciones y
+            proyecciones.
+          </div>
+          <div class="icono_tema">
+            <img src="resources/icons/file_pdf.png" alt="Icono del Archivo" />
+          </div>
+        </div>
+        <div class="contenido_temario">
+          <div class="container_description">
+            <h3>EXTRA: EJERCICIOS PASO A PASO</h3>
+            Resolución de los problemas explicada paso a paso para su
+            entendimiento.
+          </div>
+          <div class="icono_tema">
+            <img src="resources/icons/file_mp4.png" alt="Icono del Archivo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CÓDIGO CALIFICACIONES DE LA ASIGNATURA -->
+    <div id="marks_global">
+      <div id="marks">
+        <div class="container_header">
+          <h1>CALIFICACIONES DE LA ASIGNATURA</h1>
+          <img class="icono_temario" src="resources/icons/asig3black.png" alt="icono del temario" />
+        </div>
+        <div class="dv_calif">
+          <table id="grades_table">
+            <tr>
+              <!-- Cabecera de la tabla -->
+              <th></th>
+              <th class="review">Revisión</th>
+              <th>Calificación</th>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 1 -->
+              <td>
+                <h3>EXAMEN PARCIAL</h3>
+                El EXAMEN PARCIAL tiene un valor de un 40% sobre la nota final
+              </td>
+              <td>
+                <p class="text">No solicitada</p>
+              </td>
+              <td>
+                <p class="grade">9.0</p>
+              </td>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 2 -->
+              <td>
+                <h3>EXAMEN FINAL</h3>
+                El EXAMEN FINAL tiene un valor de un 60% sobre la nota final
+              </td>
+              <td>
+                <p class="text">No disponible</p>
+              </td>
+              <td>
+                <p class="text">No disponible</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="dv_califdownload">
+        <div id="dv_downloadbutton" onclick="downloadTableCalif('#grades_table')">
+          <div class="dv_downloadtext">
+            GENERAR HOJA DE CÁLCULO
+            <img src="./resources/icons/file_xls.png" alt="Logo Excel" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CÓDIGO TAREAS Y ACTIVIDADES -->
+    <div id="tasks_global">
+      <div id="tasks">
+        <div class="container_header">
+          <h1>TAREAS Y ACTIVIDADES</h1>
+          <img class="icono_temarioB tasks_icon" src="resources/icons/asig3black.png" alt="icono del temario" />
+        </div>
+        <div class="dv_calif">
+          <table class="subject_table">
+            <tr>
+              <!-- Cabecera de la tabla -->
+              <th></th>
+              <th class="review">Estado</th>
+              <th>Calificación</th>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 1 -->
+              <td>
+                <h3>ACTIVIDAD 1: Ejercicios básicos de matrices</h3>
+                LA ACTIVIDAD 1 tiene un valor de un 1% extra sobre la nota final
+              </td>
+              <td>
+                <p class="text">Calificado</p>
+              </td>
+              <td>
+                <p class="grade">10.00</p>
+              </td>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 2 -->
+              <td>
+                <h3>ACTIVIDAD 2: Problemas de sistemas de ecuaciones</h3>
+                LA ACTIVIDAD 2 tiene un valor de un 1% extra sobre la nota final
+              </td>
+              <td>
+                <p class="text">Calificado</p>
+              </td>
+              <td>
+                <p class="grade">9.5</p>
+              </td>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 3 -->
+              <td>
+                <h3>ACTIVIDAD 3: Cambio de base, valores y vectores propios</h3>
+                LA ACTIVIDAD 3 tiene un valor de un 2% extra sobre la nota final
+              </td>
+              <td>
+                <p class="text">Enviado para calificar</p>
+              </td>
+              <td>
+                <p class="text">No disponible</p>
+              </td>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 4 -->
+              <td>
+                <h3>ACTIVIDAD 4: Repaso para examen final. Ejercicios de todos los
+                  conceptos de la asignatura</h3>
+                LA ACTIVIDAD 4 tiene un valor de un 3.5% extra sobre la nota final
+              </td>
+              <td>
+                <p class="normal_size">Disponible hasta el 16-1-2021</p>
+                <div class="submit" onclick="showSubmitBox()">ENTREGAR</div>
+              </td>
+              <td>
+                <p class="text">No disponible</p>
+              </td>
+            </tr>
+            <tr>
+              <!-- Cabecera de la tabla -->
+              <th></th>
+              <th class="review">Estado</th>
+              <th class="review">Grupo</th>
+            </tr>
+            <tr class="grades_row">
+              <!-- Fila 1 -->
+              <td>
+                <h3>FORMAR GRUPOS DE TRABAJO </h3>
+              </td>
+              <td>
+                <p class="normal_size">Disponible hasta el 10-1-2021</p>
+                <div class="submit" onclick="showGroup()">GRUPO</div>
+              </td>
+              <td>
+                <p class="text">No disponible</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!--GRUPOS DE TRABAJO-->
+    <div id="workgroup">
+      <div id="groups">
+        <div class="container_header">
+          <h1>TAREAS Y ACTIVIDADES</h1>
+          <img
+            class="icono_temario"
+            src="resources/icons/asig3black.png"
+            alt="icono del temario"
+          />
+        </div>
+        <div id="workgroup_header">
+          <h1>GRUPOS DE TRABAJO</h1>
+        </div>
+        <div id="container_tasks">
+          <div class="container_assignmentName">
+            <div class="content_assignmentName">
+              <div id="ocupation">
+                <b>Ocupación</b>
+              </div>
+            </div>
+          </div>
+          <div class="content_tasks">
+            <div class="container_description">
+              <h3>GRUPO 1</h3>
+              Ver estudiantes del grupo
+            </div>
+            <div class="content_state">
+              <div class="request">
+                <p class="normal_size">COMPLETO</p>
+              </div>
+              <div class="rating">
+                <p class="big_size">4/4</p>
+              </div>
+            </div>
+          </div>
+          <div class="content_tasks">
+            <div class="container_description">
+              <h3>GRUPO 2</h3>
+              Ver estudiantes del grupo
+            </div>
+            <div class="content_state">
+              <div class="request">
+                <p class="normal_size">DISPONIBLE</p>
+                <div class="submit">ENTRAR</div>
+              </div>
+              <div class="rating">
+                <p class="big_size">3/4</p>
+              </div>
+            </div>
+          </div>
+          <div class="content_tasks">
+            <div class="container_description">
+              <h3>GRUPO 3</h3>
+              Ver estudiantes del grupo
+            </div>
+            <div class="content_state">
+              <div class="request">
+                <p class="normal_size">DISPONIBLE</p>
+                <div class="submit">ENTRAR</div>
+              </div>
+              <div class="rating">
+                <p class="big_size">3/4</p>
+              </div>
+            </div>
+          </div>
+          <div class="content_tasks">
+            <div class="container_description">
+              <h3>GRUPO 4</h3>
+              Ver estudiantes del grupo
+            </div>
+            <div class="content_state">
+              <div class="request">
+                <p class="normal_size">DISPONIBLE</p>
+                <div class="submit">ENTRAR</div>
+              </div>
+              <div class="rating">
+                <p class="big_size">2/4</p>
+              </div>
+            </div>
+          </div>
+          <div class="content_tasks">
+            <div class="container_description">
+              <h3>GRUPO 5</h3>
+              Ver estudiantes del grupo
+            </div>
+            <div class="content_state">
+              <div class="request">
+                <p class="normal_size">COMPLETO</p>
+              </div>
+              <div class="rating">
+                <p class="big_size">4/4</p>
+              </div>
+            </div>
+          </div>
+          <div class="content_tasks">
+            <div class="container_description">
+              <h3>GRUPO 6</h3>
+              Ver estudiantes del grupo
+            </div>
+            <div class="content_state">
+              <div class="request">
+                <p class="normal_size">DISPONIBLE</p>
+                <div class="submit">ENTRAR</div>
+              </div>
+              <div class="rating">
+                <p class="big_size">2/4</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENTREGADOR -->
+    <div id="drag_and_drop">
+      <div id="box">
+        <div class="container_header">
+          <h1>TAREAS Y ACTIVIDADES</h1>
+          <img
+            class="icono_temario"
+            src="resources/icons/asig3black.png"
+            alt="icono del temario"
+          />
+        </div>
+        <div id="submit_title">
+          <div class="container_description">
+            <h3>
+              ACTIVIDAD 4: Repaso para examen final. Ejercicios de todos los
+              conceptos de la asignatura
+            </h3>
+            LA ACTIVIDAD 4 tiene un valor de un 3.5% extra sobre la nota final
+          </div>
+        </div>
+        <div id="container_box">
+          <div id="content_box">
+            <div id="header_box">
+              <p id="header">
+                <i
+                  >Extensiones de archivos permitidas: png, jpg, gif, pdf, docx,
+                  xls, mp4, avi</i
+                >
+              </p>
+            </div>
+            <div id="content_files">
+              <p id="drag"><b>Arrastre aquí los archivos a entregar</b></p>
+              <div id="content_drag">
+                <img
+                  id="icon_drag"
+                  src="./resources/icons/dragAndDrop.svg"
+                  alt="subir archivo"
+                />
+              </div>
+              <div id="submit_buttom">
+                <p id="first_line"><b>ENVIAR COMO</b></p>
+                <p id="second_line"><b>BORRADOR</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./resources/js/subjects.js"></script>
+  </body>
+</html>

@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.link {
+    color: rgb(13, 9, 61);
+}
+
+.link:hover {
+    cursor: pointer;
+    color: rgb(45, 29, 221);
+    font-weight: 600;
+}
+
+.linkRed {
+    color: rgb(46, 46, 46);
+}
+
+.linkRed:hover {
+    cursor: pointer;
+    color: rgb(187, 30, 30);
+}
+
+body {
+    display: flex;
+    background: url("../images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000000;
+}
+
+#content_web {
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+#logo {
+    width: 40%;
+    margin-bottom: 1%;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#login {
+    align-self: center;
+    width: 45%;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#content_login {
+    display: flex;
+    min-height: 450px;
+    max-height: 450px;
+}
+
+#content_aside {
+    background-color: #e4e4e4;
+    width: 50%;
+}
+
+#aside_display {
+    background-image: url("../images/log_display.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    position: relative;
+}
+
+#aside_display #messagebox {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.582);
+    width: 100%;
+    padding: 2% 4%;
+}
+
+#aside_display #messagetext {
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#form_login {
+    border-right: none;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+}
+
+#title p {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 4%;
+}
+
+#form_login form {
+    overflow-y: auto;
+}
+
+#form_login #f_login {
+    margin-top: 10%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+    margin: auto;
+}
+
+#f_register .field {
+    width: 100%;
+}
+
+.inputLabel {
+    font-size: 16px;
+    margin-top: 4%;
+}
+
+.inputLabel img {
+    height: 18px;
+    vertical-align: middle;
+}
+
+.inputField input, .inputField select {
+    width: 100%;
+    padding: 4px 10px;
+    line-height: 18px;
+    border-radius: 3px;
+    border: solid black 1px;
+    margin-top: 0.5%;
+}
+
+.fieldInfo {
+    font-size: 12px;
+    color: rgb(212, 47, 47);
+}
+
+#caps_password, #caps_email {
+    display: none;
+    font-size: 12px;
+    color: rgb(224, 147, 4);
+}
+
+#form_login .buttons {
+    margin: 8%;
+    align-self: center;
+    padding: 2.5% 4%;
+    color: white;
+    border-radius: 4px;
+    border: solid 1px;
+    width: 80%;
+}
+
+.form_texts {
+    font-size: 13px;
+    text-align: center;
+}
+
+/* REGISTRO */
+
+#f_register {
+    display: none;
+}
+
+#reg_passwordB {
+    margin-top: 2%;
+}
+
+#stepbuttons {
+    display: flex;
+    align-self: flex-end;
+}
+
+#stepbuttons input {
+    margin: 2%;
+    margin-top: 6%;
+    width: 100%;
+    align-self: center;
+    padding: 2.5% 4%;
+    color: white;
+    border-radius: 4px;
+    border: solid 1px black;
+}
+
+.buttonBlue {
+    background-color: rgb(53, 80, 156);
+}
+
+.buttonBlue:hover {
+    background-color: rgb(86, 105, 145);
+    cursor: pointer;
+}
+
+.buttonBlack {
+    background-color: black;
+}
+
+.buttonBlack:hover {
+    background-color: rgb(75, 75, 75);
+    cursor: pointer;
+}
+
+.buttonGrey {
+    background: rgb(80, 80, 80);
+}
+
+.buttonGrey:hover {
+    background: rgb(145, 145, 145);
+    cursor: pointer;
+}
+
+.buttonRed {
+    background-color: rgb(212, 41, 41);
+}
+
+.buttonRed:hover {
+    background-color: rgb(235, 87, 87);
+    cursor: pointer;
+}
+
+.step2, .step3, .step4, .step5 {
+    display: none;
+}
+
+.checkbox {
+    text-align: center;
+}
+
+.profile_checkbox {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: solid 1px black;
+    border-radius: 4px;
+    margin: 1%;
+}
+
+.checkboxesprofile {
+    display: flex;
+    margin: auto;
+}
+
+.profile_checkbox label, .profile_checkbox input {
+    width: 100%;
+}
+
+.profile_checkbox {
+    background: rgb(0, 0, 0);
+}
+
+.profile_checkbox label img {
+    width: 100%;
+}
+
+#form_bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+#loading {
+    width: 100%;
+    align-self: center;
+    margin-top: 14%;
+    display: flex;
+    flex-direction: column;
+}
+
+#loading p {
+    align-self: center;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+}
+
+#p_loadingemail {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(83, 83, 83);
+}
+
+#loading img {
+    display: none;
+    align-self: center;
+    margin-top: 10px;
+    width: 35px;
+    vertical-align: middle;
+}
+
+#footer {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    margin: 0.5% 0% 1% 0%;
+    overflow: hidden;
+  }
+
+  #footer img {
+      vertical-align: middle;
+  }
+
+  #footer a {
+      color: rgb(228, 228, 228);
+      text-decoration: none;
+  }
+  
+  #footer li {
+    font-size: 16px;
+    /* List element style */
+    display: inline;
+    color: #ffffff;
+  }
+  
+  #footer ul li {
+    margin: 0.8%;
+  }
+  
+  #footerauthors {
+    margin: 0.2% auto;
+    width: 100%;
+    float: left;
+  }
+  
+  #footerauthors p {
+    color: rgba(238, 238, 238, 0.726);
+    font-weight: 600;
+  }

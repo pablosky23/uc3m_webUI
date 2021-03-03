@@ -1,0 +1,32 @@
+{
+    "titulo": "Acordar fecha para la próxima clase de repaso",
+    "tema": [
+        {
+            "name": "Marina",
+            "surname": "Lora Novillo",
+            "mail": "100404324@alumnos.uc3m.es",
+            "message": "Tal y como digo en el título del foro, hay que acordar entre todos la fecha del próximo examen, os voy a dejar una encuenta por el grupo de clase para que la vea todo el mundo y anunciaré el resultado por aquí",
+            "date": "08/07/2020",
+            "hour": "12:03",
+            "profileimg": "student2"
+        },
+        {
+            "name": "Sergio",
+            "surname": "Burgos Bravo",
+            "mail": "100409876@alumnos.uc3m.es",
+            "message": "Perfe, contad conmigo",
+            "date": "09/07/2020",
+            "hour": "10:22",
+            "profileimg": "student0"
+        },
+        {
+            "name": "Marina",
+            "surname": "Lora Novillo",
+            "mail": "100404324@alumnos.uc3m.es",
+            "message": "Perfecto, pues la votación sale finalmente 24 contra 70 a favor de realizarla el Viernes día 5",
+            "date": "10/07/2020",
+            "hour": "20:05",
+            "profileimg": "student2"
+        }
+    ]
+}

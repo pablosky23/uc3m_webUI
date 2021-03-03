@@ -1,0 +1,300 @@
+/* RESPONSIVE */
+
+/*Diseño columnas versión tablet*/
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  #img_upper_logo {
+    width: 80%;
+    margin-bottom: 2%;
+  }
+  #left_column {
+    width: 30%;
+    margin-right: 1%;
+  }
+  #center_column {
+    width: 70%;
+  }
+  #right_column {
+    display: none;
+  }
+  #container_top {
+    flex-direction: column;
+  }
+  #upper_navbar {
+    display: flex;
+    width: 100%;
+    padding: 2%;
+  }
+  #upper_navbar_menu {
+    display: flex;
+    width: 100%;
+  }
+
+  #upper_navbar_student {
+    width: 100%;
+    margin: auto;
+    margin-top: 1%;
+    max-height: 70px;
+  }
+  #drop_exit {
+    margin-bottom: 1%;
+  }
+  #nav_studentbuttons {
+    width: 5%;
+  }
+  #nav_studentbuttons img {
+    width: 14px;
+  }
+  #nav_studentleft {
+    width: 90%;
+  }
+  #nav_studentpiccont {
+    width: 11%;
+  }
+  h1 {
+    font-size: 21px;
+  }
+  #center_menu {
+    display: inline;
+  }
+  .contenido_temario {
+    flex-direction: column;
+  }
+  .container_description {
+    width: 100%;
+  }
+  .icono_tema {
+    min-width: 10%;
+    align-self: center;
+    margin: 4%;
+  }
+  .dv_downloadtext img {
+    margin-top: 2%;
+  }
+  #searchsubj {
+    margin-bottom: 3%;
+  }
+  #login {
+    width: 100%;
+  }
+  #logo {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  #control_menu_admin {
+    width: 90%;
+  }
+  #control_menu_professor {
+    font-size: 12px;
+  }
+  #calendar_option, #calendar_optionb {
+    display: none;
+  }
+
+  #slider {
+    margin-bottom: 4%;
+  }
+
+  .icono_noticias {
+    height: 30px;
+  }
+
+  .single_new {
+    margin: 3%;
+  }
+
+  .navbar_elementcont {
+    margin: auto 3%;
+    padding: 0.5%;
+  }
+  
+  .navbar_element {
+    margin: auto;
+  }
+
+  #upper_navbar_menu {
+    justify-content: center;
+  }
+
+  #dv_indexpopupcontent {
+    width: 70%;
+  }
+
+}
+
+/*Diseño columnas versión móvil*/
+
+@media screen and (max-width: 600px) {
+  #img_upper_logo {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  #left_column {
+    width: 100%;
+    margin-top: 1%;
+  }
+  #center_column {
+    width: 100%;
+    margin-top: 1%;
+  }
+  #right_column {
+    width: 100%;
+    margin: 0;
+    margin-top: 2%;
+    padding: 2%;
+  }
+  .right_menus {
+    display: none;
+  }
+  #right_menus {
+    margin-bottom: 5%;
+  }
+  #container_top {
+    flex-direction: column;
+  }
+  #upper_navbar {
+    display: flex;
+    width: 100%;
+    padding: 2%;
+
+  }
+  #upper_navbar_menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  #upper_navbar_student {
+    width: 100%;
+    margin: auto;
+    margin-top: 1%;
+    max-height: 80px;
+    min-height: 60px;
+  }
+  #nav_studentbuttons {
+    width: 5%;
+  }
+  #nav_studentbuttons img {
+    width: 14px;
+  }
+  #nav_studentleft {
+    width: 90%;
+  }
+  h1 {
+    font-size: 21px;
+  }
+  #center_menu {
+    display: inline;
+  }
+  #master_body {
+    display: flex;
+    flex-direction: column;
+  }
+  #changing_title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  #searchsubj {
+    margin-bottom: 1%;
+  }
+  #changing_info {
+    font-size: 14px;
+  }
+  .text_single_subject {
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .subject_name {
+    font-size: 13px;
+  }
+  .subject_group {
+    font-size: 11;
+  }
+  .icon_single_subject, .option_icon {
+    min-width: 7%;
+    max-width: 7%;
+    height: 100%;
+  }
+  .bottom_menus {
+    margin-top: 0%;
+  }
+  #left_column {
+    margin-bottom: 1%;
+  }
+  .toggles_leftimg span {
+    display: inline;
+  }
+  .left_column {
+    border-radius: 0px;
+  }
+  .subjects_title {
+    display: none;
+  }
+  .contenido_temario {
+    flex-direction: column;
+  }
+  .container_description {
+    width: 100%;
+  }
+  .icono_tema {
+    margin: 4%;
+    min-width: 10%;
+    align-self: center;
+  }
+  .dv_downloadtext img {
+    margin-top: 2%;
+  }
+  .container_description {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  #login {
+    width: 100%;
+  }
+  #logo {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  #control_menu_admin {
+    width: 90%;
+    font-size: 14px;
+  }
+  #control_menu_professor {
+    font-size: 12px;
+  }
+  #slider {
+    margin-bottom: 4%;
+  }
+
+  .icono_noticias {
+    height: 30px;
+  }
+
+  .single_new {
+    margin: 4%;
+  }
+  
+  .navbar_elementcont {
+    margin: auto 2%;
+    padding: 0.5%;
+  }
+  
+  .navbar_element {
+    margin: auto;
+  }
+
+  #upper_navbar_menu {
+    justify-content: center;
+  }
+
+  #nav_studentpiccont {
+    width: 20%;
+  }
+
+  #dv_indexpopupcontent {
+    width: 80%;
+  }
+}

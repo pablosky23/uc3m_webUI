@@ -1,0 +1,58 @@
+#dv_indexpopup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000000b5;
+    display: none;
+    margin: auto;
+}
+
+#dv_indexpopupcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+#dv_indexpopupcontent {
+    width: 25%;
+    margin: 15% auto;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5%;
+    border-radius: 2px;
+    justify-content: center;
+    position: relative;
+    border: solid 2px rgb(255, 255, 255);
+    text-align: center;
+}
+
+#p_popuptitle {
+    font-weight: bold;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    border-bottom: solid 2px black;
+}
+
+#dv_indexpopupclose {
+    position: absolute;
+    top: -3px;
+    right: -40px;
+}
+
+#dv_indexpopupclose img {
+    cursor: pointer;
+    height: 35px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+#dv_popupimage {
+    margin: auto;
+    width: 20%;
+}
+
+#dv_popupimage img {
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+{
+    "titulo": "Ayuda en cuanto a la realización de los ejercicios opcionales",
+    "tema": [
+        {
+            "name": "Benito",
+            "surname": "Rivas Monteiro",
+            "mail": "100405973@alumnos.uc3m.es",
+            "message": "Va a sonar un poco estúpido, pero no se en qué formato subir los ejercicios opcionales",
+            "date": "06/07/2020",
+            "hour": "14:33",
+            "profileimg": "student0"
+        },
+        {
+            "name": "Sergio",
+            "surname": "Burgos Bravo",
+            "mail": "100409876@alumnos.uc3m.es",
+            "message": "Simplemente tienes que hacerlos a papel y luego escanearlo, ya sea mediante una app en el móvil o mediante un escaner convencional",
+            "date": "06/07/2020",
+            "hour": "15:37",
+            "profileimg": "student0"
+        }
+    ]
+}

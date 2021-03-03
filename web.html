@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos -->
+    <title>PEV - Plataforma Educativa Virtual</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/ico" href="./resources/icons/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./resources/styles/web.css" />
+    <link rel="stylesheet" href="./resources/styles/calendar.css" />
+    <link rel="stylesheet" href="./resources/styles/popup.css" />
+    <link rel="stylesheet" href="./resources/styles/forum.css" />
+    <link rel="stylesheet" href="./resources/styles/students.css" />
+    <link rel="stylesheet" href="./resources/styles/subjects.css" />
+    <link rel="stylesheet" href="./resources/styles/responsive.css" />
+    <link rel="stylesheet" href="./resources/styles/globalgrades.css" />
+  </head>
+
+  <body>
+    <div id="content_web">
+      <!-- INICIO CONTENEDOR PRINCIPAL -->
+      <div id="principal_containter">
+        <!-- INICIO CABECERA DE LA PÁGINA -->
+        <div>
+          <!-- CONTENEDOR LOGO -->
+          <div id="img_upper_logo">
+            <a href="web.html"
+              ><img
+                src="./resources/images/web_logo.png"
+                alt="Logo universidad Carlos III"
+              />
+            </a>
+          </div>
+
+          <!-- CONTENEDOR NAVBAR -->
+          <div id="container_top">
+            <div id="upper_navbar" class="box_shadow">
+              <!-- MENÚ -->
+              <div id="upper_navbar_menu">
+                <!-- ICONO 1 -->
+                <div class="navbar_elementcont">
+                  <a onclick = "backToInit()">
+                    <div class="navbar_element">
+                      <div class="navbar_elimg">
+                        <img
+                          src="./resources/icons/homewhite.png"
+                          alt="Icono de Inicio"
+                        />
+                      </div>
+                      <div class="navbar_eltext">
+                        <p>Inicio</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- ICONO 2 -->
+                <div class="navbar_elementcont">
+                  <a
+                    href="https://www.uc3m.es/ss/Satellite/Infraestructuras/es/TextoDosColumnas/1371264307813/CONTACTA:_La_comunidad_de_ayuda_y_soporte_de_la_UC3M" target="_blank"
+                  >
+                    <div class="navbar_element">
+                      <div class="navbar_elimg">
+                        <img
+                          src="./resources/icons/helpwhite.png"
+                          alt="Icono de Ayuda"
+                        />
+                      </div>
+                      <div class="navbar_eltext">
+                        <p>Ayuda</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- ICONO 3 -->
+                <div class="navbar_elementcont">
+                  <a
+                    href="https://www.uc3m.es/ss/Satellite/SecretariaVirtual/es/TextoMixta/1371210488952/Calendarios_y_horarios" target="_blank"
+                  >
+                    <div class="navbar_element">
+                      <div class="navbar_elimg">
+                        <img
+                          src="./resources/icons/timetableswhite.png"
+                          alt="Icono de Horarios"
+                        />
+                      </div>
+                      <div class="navbar_eltext">
+                        <p>Horarios</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- ICONO 4 -->
+                <div class="navbar_elementcont">
+                  <a href="https://www.uc3m.es/ss/Satellite/SecretariaVirtual/es/TextoMixta/1371210489407/Notas_y_expediente" target="_blank">
+                    <div class="navbar_element">
+                      <div class="navbar_elimg">
+                        <img
+                          src="./resources/icons/expwhite.png"
+                          alt="Icono de Expedientes"
+                        />
+                      </div>
+                      <div class="navbar_eltext">
+                        <p>Expedientes</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- ICONO 5 -->
+                <div class="navbar_elementcont">
+                  <a href="https://www.uc3m.es/conocenos/normativa" target="_blank">
+                    <div class="navbar_element">
+                      <div class="navbar_elimg">
+                        <img
+                          src="./resources/icons/ruleswhite.png"
+                          alt="Icono de Normativa"
+                        />
+                      </div>
+                      <div class="navbar_eltext">
+                        <p>Normativa</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ALUMNO -->
+            <div id="upper_navbar_student" class="box_shadow">
+              <div id="nav_studentleft">
+                <div id="nav_studentname">
+                  <p>Invitado</p>
+                </div>
+                <div id="drop_exit">
+                  <div id="drop_exitcontent" onclick="closeSession()">
+                    <div class="drop_icon">
+                      <img
+                        alt="Imagen Icono"
+                        src="./resources/icons/exit.png"
+                        id="option_exit"
+                      />
+                    </div>
+                    <div class="drop_text">
+                      <p>Cerrar sesión</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ELEMENTOS DEL ALUMNO -->
+              <div id="nav_studentbuttons">
+                <!-- NOTIFICACIONES -->
+                <div id="nav_studentnotif" onclick="checkUserInbox('notif')">
+                  <img alt="imagen icono" src="./resources/icons/bell.svg" />
+                </div>
+                <!-- MENSAJES -->
+                <div id="nav_studentmsg" onclick="checkUserInbox('msg')">
+                  <img alt="imagen icono" src="./resources/icons/msg.svg" />
+                </div>
+              </div>
+              <div id="nav_studentpiccont">
+                <div id="nav_studentpic">
+                  <img
+                    src="./resources/images/profiles/student0.png"
+                    alt="Foto de perfil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENEDOR DEL TÍTULO -->
+          <div id="adminpanel" class="box_shadow">
+            <div id="adminpanelcont">
+              <h1>ADMINISTRACIÓN</h1>
+              <div id="control_menu_admin">
+                <!-- Elemento de control nº 1 -->
+                <div class="control_menu_element">
+                  <div class="control_menu_icon">
+                    <img
+                      src="./resources/icons/option_cpanel.png"
+                      alt="elemento de control"
+                    />
+                  </div>
+                  <div class="control_menu_description">
+                    <p>Panel de Control</p>
+                  </div>
+                </div>
+
+                <!-- Elemento de control nº 2 -->
+                <div class="control_menu_element">
+                  <div class="control_menu_icon">
+                    <img
+                      src="./resources/icons/option_mysql.png"
+                      alt="elemento de control"
+                    />
+                  </div>
+                  <div class="control_menu_description">
+                    <p>Gestor MySQL</p>
+                  </div>
+                </div>
+
+                <!-- Elemento de control nº 3 -->
+                <div
+                  class="control_menu_element"
+                  onclick="showTasks('professor')"
+                >
+                  <div class="control_menu_icon">
+                    <img
+                      src="./resources/icons/option_ftp.png"
+                      alt="elemento de control"
+                    />
+                  </div>
+                  <div class="control_menu_description">
+                    <p>Cliente FTP</p>
+                  </div>
+                </div>
+
+                <!-- Elemento de control nº 4 -->
+                <div class="control_menu_element">
+                  <div class="control_menu_icon">
+                    <img
+                      src="./resources/icons/option_stats.png"
+                      alt="elemento de control"
+                    />
+                  </div>
+                  <div class="control_menu_description">
+                    <p>Estadísticas de Uso</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTENEDOR DEL TÍTULO -->
+        <div id="upper_title" class="box_shadow">
+          <div id="upper_titlecont">
+            <p id="changing_title"></p>
+            <p id="changing_info"></p>
+          </div>
+          <div class="editicon" onclick="editTitle()">
+            <img alt="imagen icono" src="./resources/icons/edit.png" />
+          </div>
+        </div>
+      </div>
+      <!-- FIN CABECERA DE LA PÁGINA -->
+
+      <!-- INICIO CUERPO DE LA PÁGINA -->
+      <div id="master_body">
+        <!-- INICIO COLUMNA IZQUIERDA -->
+        <div id="left_column" class="box_shadow">
+          <!-- MENÚ DE ASIGNATURAS ACTUALES -->
+          <div id="searchsubj">
+            <input
+              type="text"
+              id="searchsubjinput"
+              placeholder=" Buscador de asignaturas"
+            />
+          </div>
+          <div class="subjects_title">
+            <div class="subjects_icon">
+              <img alt="imagen icono" src="./resources/icons/asig2.png" />
+            </div>
+            <div class="subjects_cat" id="topcat">Asignaturas Matriculadas</div>
+          </div>
+          <div class="toggle_subject_menu">
+            <div id="current_subject_menu">
+              <div id="addsubj">
+                <div class="toggles_leftimg" onclick="addSubject()">
+                  Añadir Asignatura
+                  <img alt="imagen icono" src="./resources/icons/add.png" />
+                </div>
+              </div>
+            </div>
+            <div class="toggles_left" onclick="toggleLeftSubjects(0)">
+              <div class="toggles_leftimg">
+                <span>Asignaturas Matriculadas </span
+                ><img
+                  alt="imagen Icono"
+                  id="toggles_currentsubj"
+                  src="./resources/icons/arrowup.png"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- MENÚ DE ASIGNATURAS SUPERADAS -->
+          <div class="subjects_title menus_hideable" id="bottomasig">
+            <div class="subjects_icon">
+              <img alt="imagen icono" src="./resources/icons/asig2.png" />
+            </div>
+            <div class="subjects_cat">Asignaturas Superadas</div>
+          </div>
+          <div class="toggle_subject_menu menus_hideable">
+            <div id="old_subject_menu"></div>
+            <div class="toggles_left" onclick="toggleLeftSubjects(1)">
+              <div class="toggles_leftimg">
+                <span>Asignaturas Superadas </span
+                ><img
+                  alt="imagen Icono"
+                  id="toggles_oldsubj"
+                  src="./resources/icons/arrowdown.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FIN COLUMNA IZQUIERDA -->
+
+        <!-- INICIO COLUMNA CENTRAL -->
+        <div id="center_column" class="box_shadow">
+          <!-- Menú para la versión Móvil y Tablet -->
+          <div id="center_menu">
+            <div id="center_menucont">
+              <div id="menu_init">
+                <a
+                  href="https://www.uc3m.es/ss/Satellite/UC3MInstitucional/es/ServiciosUniversitarios/1371218743367/Secretarias_de_departamento"
+                >
+                  <div class="menu_option">
+                    <div class="menu_opticon">
+                      <img
+                        alt="imagen icono"
+                        src="./resources/icons/asig3black.png"
+                      />
+                    </div>
+
+                    <div class="menu_opttext">
+                      <p><b>Secretaria</b></p>
+                      <p>Gestiones de la secretaría virtual</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://www.uc3m.es/conocenos/departamentos">
+                  <div class="menu_option">
+                    <div class="menu_opticon">
+                      <img
+                        alt="imagen icono"
+                        src="./resources/icons/asig3black.png"
+                      />
+                    </div>
+                    <div class="menu_opttext">
+                      <p><b>Departamentos uc3m</b></p>
+                      <p>Departamentos docentes de la uc3m</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://www.uc3m.es/inicio/noticias">
+                  <div class="menu_option">
+                    <div class="menu_opticon">
+                      <img
+                        alt="imagen icono"
+                        src="./resources/icons/asig3black.png"
+                      />
+                    </div>
+                    <div class="menu_opttext">
+                      <p><b>Noticias uc3m</b></p>
+                      <p>Acontecimientos en la uc3m</p>
+                    </div>
+                  </div>
+                </a>
+                <div class="menu_option">
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Matriculación</b></p>
+                    <p>Información sobre matriculación</p>
+                  </div>
+                </div>
+                <div
+                  class="menu_option"
+                  onclick="showCalendar()"
+                  id="calendar_option"
+                >
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/calendar.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Calendario</b></p>
+                    <p>Consulta los eventos de tu calendario</p>
+                  </div>
+                </div>
+              </div>
+              <div id="menu_subjects">
+                <div
+                  class="menu_option"
+                  onclick="showTemario()"
+                  id="menu_temario"
+                >
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Temario</b></p>
+                    <p>Transparencias y libros</p>
+                  </div>
+                </div>
+                <div class="menu_option" onclick="showForum()" id="menu_forum">
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Foro de la Asignatura</b></p>
+                    <p>Dudas sobre la asignatura</p>
+                  </div>
+                </div>
+                <div
+                  class="menu_option"
+                  onclick="showGrades()"
+                  id="menu_grades"
+                >
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Calificaciones</b></p>
+                    <p>Notas de tareas y exámenes</p>
+                  </div>
+                </div>
+                <div class="menu_option" onclick="showTasks()" id="menu_tasks">
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Tareas y Actividades</b></p>
+                    <p>Ejercicios y problemas</p>
+                  </div>
+                </div>
+                <div class="menu_option" onclick="showCalendar()" id="calendar_optionb">
+                  <div class="menu_opticon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/calendar.png"
+                    />
+                  </div>
+                  <div class="menu_opttext">
+                    <p><b>Calendario</b></p>
+                    <p>Consulta los eventos de tu calendario</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="menu_toggle" onclick="toggleResponsiveMenu()">
+              <div id="menu_toggleimg">
+                Opciones de contenido
+                <img alt="imagen icono" src="./resources/icons/arrowdown.png" />
+              </div>
+            </div>
+          </div>
+          <!-- Contenido que cambia en base a las asignaturas -->
+          <div id="container_changed"></div>
+        </div>
+        <!-- FIN COLUMNA CENTRAL -->
+
+        <!-- INICIO COLUMNA DERECHA -->
+        <!-- Aquí se inyecta el contenido de la columna derecha desde un html auxiliar -->
+        <div id="right_column" class="box_shadow">
+          <!-- TOGGLE -->
+          <div id="right_menus">
+            <div id="toggle_menu">
+              <div class="options_title">
+                <div class="options_icon">
+                  <img alt="imagen icono" src="./resources/icons/asig3.png" />
+                </div>
+                <div class="options_text">PÁGINA PRINCIPAL</div>
+              </div>
+            </div>
+
+            <!-- Menú derecho Versión Escritorio -->
+            <!-- MENÚ DE INICIO -->
+            <div id="right_basic_menu">
+              <a
+                href="https://www.uc3m.es/ss/Satellite/UC3MInstitucional/es/ServiciosUniversitarios/1371218743367/Secretarias_de_departamento"
+              >
+                <div class="option_content right_menus">
+                  <div class="option_icon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="option_texts">
+                    <p class="menu_title">Secretaria EPS</p>
+
+                    <p class="menu_description">
+                      Gestiones de Secretaría Virtual
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="https://www.uc3m.es/conocenos/departamentos">
+                <div class="option_content right_menus">
+                  <div class="option_icon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="option_texts">
+                    <p class="menu_title">Departamentos uc3m</p>
+                    <p class="menu_description">
+                      Departamentos docentes de la uc3m
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="https://www.uc3m.es/inicio/noticias">
+                <div class="option_content right_menus">
+                  <div class="option_icon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="option_texts">
+                    <p class="menu_title">Noticias uc3m</p>
+                    <p class="menu_description">Acontecimientos en la uc3m</p>
+                  </div>
+                </div>
+              </a>
+              <a href="https://www.uc3m.es/grado/admision/solicitud/matricula">
+                <div class="option_content right_menus">
+                  <div class="option_icon">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/icons/asig3black.png"
+                    />
+                  </div>
+                  <div class="option_texts">
+                    <p class="menu_title">Matriculación</p>
+                    <p class="menu_description">
+                      Información sobre matriculación
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- MENÚ DE ASIGNATURA -->
+            <div id="right_subject_menu">
+              <!-- Apartados de la asignatura -->
+              <div
+                class="option_content right_menus"
+                onclick="showTemario()"
+                id="option_temario"
+              >
+                <div class="option_icon">
+                  <img
+                    alt="imagen icono"
+                    src="./resources/icons/asig3black.png"
+                  />
+                </div>
+                <div class="option_texts">
+                  <p class="menu_title">Temario</p>
+                  <p class="menu_description">Transparencias y libros</p>
+                </div>
+              </div>
+              <div
+                class="option_content right_menus"
+                onclick="showForum()"
+                id="option_forum"
+              >
+                <div class="option_icon">
+                  <img
+                    alt="imagen icono"
+                    src="./resources/icons/asig3black.png"
+                  />
+                </div>
+                <div class="option_texts">
+                  <p class="menu_title">Foro de la Asignatura</p>
+                  <p class="menu_description">Dudas sobre la asignatura</p>
+                </div>
+              </div>
+              <div
+                class="option_content right_menus"
+                onclick="showGrades()"
+                id="option_marks"
+              >
+                <div class="option_icon">
+                  <img
+                    alt="imagen icono"
+                    src="./resources/icons/asig3black.png"
+                  />
+                </div>
+                <div class="option_texts">
+                  <p class="menu_title">Calificaciones</p>
+                  <p class="menu_description">Notas de tareas y exámenes</p>
+                </div>
+              </div>
+
+              <div
+                class="option_content right_menus"
+                onclick="showTasks()"
+                id="option_tasks"
+              >
+                <div class="option_icon">
+                  <img
+                    alt="imagen icono"
+                    src="./resources/icons/asig3black.png"
+                  />
+                </div>
+                <div class="option_texts">
+                  <p class="menu_title">Tareas y Actividades</p>
+                  <p class="menu_description">Ejercicios y problemas</p>
+                </div>
+              </div>
+
+              <!-- Información del profesor de la asignatura -->
+              <div id="professor_content">
+                <div id="professor_top">
+                  <div id="professor_image">
+                    <img
+                      alt="imagen icono"
+                      src="./resources/images/professors/default.png"
+                    />
+                  </div>
+                  <div id="professor_texts">
+                    <p id="professor_name"></p>
+                    <p id="professor_title"></p>
+                  </div>
+                </div>
+                <div id="professor_bottom">
+                  <div id="professor_divider"></div>
+                  <div id="professor_bot">
+                    <div
+                      class="toggles_left"
+                      id="addprof"
+                      onclick="addProfessor()"
+                    >
+                      <div class="toggles_leftimg">
+                        Añadir Profesor
+                        <img
+                          alt="imagen icono"
+                          src="./resources/icons/add.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CALENDARIO -->
+          <div id="calendar_right">
+            <div id="calendar_import" class="bottom_menus"></div>
+          </div>
+        </div>
+        <!-- FIN COLUMNA DERECHA -->
+      </div>
+      <!-- FIN CUERPO DE LA PÁGINA -->
+    </div>
+
+    <!-- INICIO FOOTER -->
+    <div id="footer">
+      <ul>
+        <li><a href="https://www.uc3m.es/inicio/contacta">Contacto</a></li>
+        <li>|</li>
+        <li>
+          <a
+            href="https://www.uc3m.es/inicio/informacion-legal/politica-privacidad"
+            >Política de privacidad</a
+          >
+        </li>
+        <li>|</li>
+        <li>
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+            <img src="./resources/images/img_cc.png" alt="Creative Commons" />
+          </a>
+        </li>
+      </ul>
+      <div id="footerauthors">
+        <p>Copyright 2020 © PDHG, SCT, DFP, NFP</p>
+      </div>
+    </div>
+    <!-- FIN FOOTER -->
+
+    <!-- FIN CONTENEDOR PRINCIPAL -->
+    <div id="dv_indexpopup">
+      <div id="dv_indexpopupcontainer" class="box_shadow">
+        <div id="dv_indexpopupcontent">
+          <p id="p_popuptitle">CIERRE DE SESIÓN</p>
+          <p>Se ha cerrado sesión correctamente.</p>
+          <div id="dv_popupimage">
+            <img alt="imagen icono" src="./resources/icons/exit.gif" />
+          </div>
+          <p>Serás redirigido al inicio de sesión.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./resources/js/web.js"></script>
+    <script src="./resources/js/js.cookie.js"></script>
+    <script src="./resources/js/calendar.js"></script>
+    <script src="./resources/js/slideshow.js"></script>
+    <script src="./resources/js/table2excel.js"></script>
+    <!-- FIN SCRIPTS -->
+  </body>
+</html>

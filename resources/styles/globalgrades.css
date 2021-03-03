@@ -1,0 +1,79 @@
+/*Estilos pertenecientes a las calificaciones*/
+
+.dv_calif {
+  width: 100%;
+  display: table;
+  overflow: hidden;
+}
+
+#dv_tableusercalif,
+#dv_downloadbuttonuser {
+  display: none;
+}
+
+.dv_calif > table td {
+  font-size: 16px;
+  border-radius: 2px;
+  padding: 0.2% 0.5% 0.2% 1%;
+  text-align: left;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+#table_califuser {
+  display: none;
+}
+
+.row_calif_1 {
+  background-color: rgb(68, 68, 68);
+}
+
+.row_calif_1 td {
+  color: rgb(224, 224, 224);
+}
+
+.row_calif_2 {
+  background-color: rgb(246, 246, 246);
+}
+
+#dv_califdownload {
+  justify-items: center;
+  padding: 1%;
+  width: 100%;
+  margin-top: 2%;
+}
+
+#dv_downloadbutton,
+#dv_downloadbuttonuser {
+  margin: 0% 15% 0% 15%;
+  cursor: pointer;
+  border: solid 2px black;
+  border-radius: 5px;
+  background-color: rgb(41, 41, 41);
+  background-position: center;
+  background-size: cover;
+}
+
+#dv_downloadbutton:hover,
+#dv_downloadbuttonuser:hover {
+  background-color: rgb(1, 130, 1);
+}
+
+.dv_downloadtext {
+  margin: 1%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.dv_downloadtext img {
+  height: 40px;
+  vertical-align: middle;
+  margin-left: 2%;
+}
+
+.dv_calif table {
+  width: 100%;
+}

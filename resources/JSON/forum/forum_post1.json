@@ -1,0 +1,41 @@
+{
+    "titulo": "Duda ejercicio sobre la Diferencia de potencial",
+    "tema": [
+        {
+            "name": "Andrea",
+            "surname": "Ibarra Sales",
+            "mail": "100409005@alumnos.uc3m.es",
+            "message": "Como digo en el tema del foro, tengo una serie de dudas a la hora de calcular la diferencia de potencial",
+            "date": "06/07/2020",
+            "hour": "18:28",
+            "profileimg": "student2"
+        },
+        {
+            "name": "Pablo",
+            "surname": "Díaz-Heredero García",
+            "mail": "100405973@alumnos.uc3m.es",
+            "message": "La diferencia de potencial se calcula con una fórmula que viene en la página 34 del libro pequeño",
+            "date": "07/07/2020",
+            "hour": "11:35",
+            "profileimg": "student1"
+        },
+        {
+            "name": "Aurora",
+            "surname": "Mondejar Posada",
+            "mail": "100405835@alumnos.uc3m.es",
+            "message": "Ya, pero esa parte no la han explicado...",
+            "date": "08/07/2020",
+            "hour": "14:05",
+            "profileimg": "student2"
+        },
+        {
+            "name": "Benito",
+            "surname": "Rivas Monteiro",
+            "mail": "100405973@alumnos.uc3m.es",
+            "message": "Estoy de acuerdo con Aurora, pero para mi ese enunciado sigue incompleto",
+            "date": "08/07/2020",
+            "hour": "14:45",
+            "profileimg": "student0"
+        }
+    ]
+}

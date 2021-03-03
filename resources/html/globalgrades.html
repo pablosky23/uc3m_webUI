@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Calificaciones</title>
+  </head>
+  <body>
+    <div class="container_header">
+      <h1>ADMINISTRADOR DE CALIFICACIONES</h1>
+      <img class="icono_temarioB" src="resources/icons/gradesop.png" alt="icono notas" />
+    </div>
+     <!-- Calificaciones de la asignatura -->
+    <!-- Listado de Calificaciones -->
+    <div class="dv_calif">
+      <table id="table_calif">
+        <tr>
+          <!-- Cabecera de la tabla -->
+          <th>Estudiante</th>
+          <th>Act. 1</th>
+          <th>Act. 2</th>
+          <th>Act. 3</th>
+        </tr>
+        <tr class="row_calif_1">
+          <!-- Fila 1 -->
+          <td>NOÉ FUENTE PEÑALVER</td>
+          <td>8.5</td>
+          <td>6.0</td>
+          <td>10.0</td>
+        </tr>
+        <tr class="row_calif_2">
+          <!-- Fila 2 -->
+          <td>PABLO DÍAZ-HEREDERO GARCÍA</td>
+          <td>10.0</td>
+          <td>7.5</td>
+          <td>9.0</td>
+        </tr>
+        <tr class="row_calif_1">
+          <!-- Fila 3 -->
+          <td>ANDREA IBARRA SALES</td>
+          <td>7.0</td>
+          <td>6.5</td>
+          <td>9.0</td>
+        </tr>
+        <tr class="row_calif_2">
+          <!-- Fila 4 -->
+          <td>MARINA LORA NOVILLO</td>
+          <td>4.5</td>
+          <td>7.0</td>
+          <td>6.0</td>
+        </tr>
+        <tr class="row_calif_1">
+          <!-- Fila 5 -->
+          <td>SERGIO BURGOS BRAVO</td>
+          <td>8.0</td>
+          <td>5.5</td>
+          <td>3.0</td>
+        </tr>
+        <tr class="row_calif_2">
+          <!-- Fila 6 -->
+          <td>ESTHER CHINCHILLA MOYA</td>
+          <td>7.0</td>
+          <td>9.5</td>
+          <td>8.0</td>
+        </tr>
+        <tr class="row_calif_1">
+          <!-- Fila 7 -->
+          <td>AURORA MONDEJAR POSADA</td>
+          <td>4.5</td>
+          <td>6.0</td>
+          <td>7.5</td>
+        </tr>
+        <tr class="row_calif_2">
+          <!-- Fila 8 -->
+          <td>GABRIEL MENDES MATIAS</td>
+          <td>3.5</td>
+          <td>2.0</td>
+          <td>6.5</td>
+        </tr>
+        <tr class="row_calif_1">
+          <!-- Fila 9 -->
+          <td>BENITO RIBAS MONTEIRO</td>
+          <td>7.0</td>
+          <td>5.0</td>
+          <td>3.5</td>
+        </tr>
+        <tr class="row_calif_2">
+          <!-- Fila 10 -->
+          <td>PILAR PUERTO EDO</td>
+          <td>5.5</td>
+          <td>7.0</td>
+          <td>8.0</td>
+        </tr>
+      </table>
+    </div>
+    <div id="dv_califdownload">
+      <div id="dv_downloadbutton" onclick="downloadTableCalif('#table_calif')">
+        <div class="dv_downloadtext">
+          GENERAR HOJA DE CÁLCULO
+          <img src="./resources/icons/file_xls.png" alt="Logo Excel" />
+        </div>
+      </div>
+     
+    </div>
+  </body>
+</html>
